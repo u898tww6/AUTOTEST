@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="我自己的接口测试套件">
+    <test name="这些是测试模板">
+        <classes>
+            <class name="com.course.extend.demo.TestMethodsDemo">
+            <methods>
+                <include name="test1"/>
+                <include name="test2"/>
+                <include name="test3"/>
+                <include name="logDemo"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+    <listeners>
+        <!--<listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter" />-->
+        <!--<listener class-name="com.course.extend.demo.ExtentTestNGIReporterListenerOld"></listener>-->
+        <listener class-name="com.course.extend.demo.ExtentTestNGIReporterListener"></listener>
+    </listeners>
+
+</suite>

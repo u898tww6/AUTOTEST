@@ -62,13 +62,14 @@
             <version>6.10</version>
         </dependency>
 
-        <!--不知道
+        <!--
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>Chapter6</artifactId>
+            <artifactId>Chapter13</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
-        </dependency>-->
+        </dependency>
+        -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

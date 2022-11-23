@@ -48,7 +48,7 @@ public class LoginTest {
         @Test(description = "用户登陆失败接口")
         public void loginFalse() throws IOException {
             SqlSession session = DatabaseUtil.getSqlSession();
-            LoginCase loginCase = session.selectOne("loginCase",2);
+            LoginCase loginCase = session.selectOne("loginCase",1);
             System.out.println(loginCase.toString());
             System.out.println(TestConfig.loginUrl);
 

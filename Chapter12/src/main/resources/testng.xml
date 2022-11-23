@@ -12,20 +12,23 @@
                 </methods>
             </class>
             <class name="com.tester.cases.AddUserTest">
-            <methods>
-            <include name="addUser"/>
-            </methods>
+                <methods>
+                    <include name="addUser"/>
+                </methods>
             </class>
+            <!--
             <class name="com.tester.cases.GetUserInfoTest">
-            <methods>
-            <include name="getUserInfo"/>
-            </methods>
+                <methods>
+                    <include name="getUserInfo"/>
+                </methods>
             </class>
+
+
             <class name="com.tester.cases.UpdateUserInfoTest">
-            <methods>
-            <include name="updateUserInfo"/>
-            <include name="deleteUser"/>
-            </methods>
+                <methods>
+                    <include name="updateUserInfo"/>
+                    <include name="deleteUser"/>
+                </methods>
             </class>
 
 
@@ -33,8 +36,9 @@
                 <methods>
                     <include name="getUserListInfo"/>
                 </methods>
-            </class>
+            </class>-->
         </classes>
+
 
     </test>
 

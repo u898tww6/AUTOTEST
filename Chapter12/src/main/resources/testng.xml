@@ -4,7 +4,6 @@
 
     <test name="用户管理系统测试用例">
         <classes>
-
             <class name="com.tester.cases.LoginTest">
                 <methods>
                     <include name="loginTrue"/>
@@ -38,8 +37,6 @@
                 </methods>
             </class>
         </classes>
-
-
     </test>
 
     <listeners>

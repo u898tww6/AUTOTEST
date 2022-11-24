@@ -42,13 +42,12 @@ public class LoginTest {
             //处理结果，就是判断返回结果是否符合预期
             Assert.assertEquals(loginCase.getExpected(),result);
 
-
         }
 
         @Test(description = "用户登陆失败接口")
         public void loginFalse() throws IOException {
             SqlSession session = DatabaseUtil.getSqlSession();
-            LoginCase loginCase = session.selectOne("loginCase",1);
+            LoginCase loginCase = session.selectOne("loginCase",2);
             System.out.println(loginCase.toString());
             System.out.println(TestConfig.loginUrl);
 
@@ -60,8 +59,6 @@ public class LoginTest {
             Assert.assertEquals(loginCase.getExpected(),result);
 
         }
-
-
 
 
         private String getResult(LoginCase loginCase) throws IOException {

@@ -75,7 +75,7 @@ public class LoginTest {
             StringEntity entity = new StringEntity(param.toString(),"utf-8");
             post.setEntity(entity);
             //声明一个对象来进行响应结果的存储
-            String result="true";
+            String result;
             //执行post方法
             HttpResponse response = TestConfig.defaultHttpClient.execute(post);
             //获取响应结果

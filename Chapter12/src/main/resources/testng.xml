@@ -22,7 +22,6 @@
                 </methods>
             </class>
 
-
             <class name="com.tester.cases.UpdateUserInfoTest">
                 <methods>
                     <include name="updateUserInfo"/>

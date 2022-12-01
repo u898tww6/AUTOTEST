@@ -6,7 +6,8 @@ import lombok.Data;
 public class AddUserCase {
     private String userName;
     private String password;
-    private String age;
+    //private String age;
+    private int age;
     private String sex;
     private String permission;//权限
     private String isDelete;//是否删除

@@ -10,9 +10,12 @@ spring:
     name: report
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://127.0.0.1:3306/course?serverTimeone=GMT
+    #username: root
+    #password: sql
     url: jdbc:mysql://192.168.221.128:3306/course?serverTimeone=GMT
     username: root
-    password: sql
+    password: root
 
 mybatis:
   type-aliases-package: com.course.model

@@ -7,12 +7,13 @@ public class User {
     private int id;
     private String userName;
     private String password;
-    private String age;
+    private int age;
+    //private String age;
     private String sex;
     private String permission;//权限
     private String isDelete;//是否删除
 
-    //复写toString方法,这样比较准
+    //复写toString方法,处理json文件，这样比较准
     @Override
     public String toString(){
         return (

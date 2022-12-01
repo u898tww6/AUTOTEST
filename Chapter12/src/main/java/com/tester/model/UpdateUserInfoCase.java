@@ -8,7 +8,8 @@ public class UpdateUserInfoCase {
     private int userId;
     private String userName;
     private String sex;
-    private String age;
+    //private String age;
+    private int age;
     private String permission;//权限
     private String isDelete;
     private String expected;

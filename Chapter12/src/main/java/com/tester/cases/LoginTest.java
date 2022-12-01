@@ -19,8 +19,8 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class LoginTest {
-
-    @BeforeTest(groups = "loginTrue",description = "测试准备工作,,获取HttpClient对象")
+    //测试之前获取链接
+    @BeforeTest(groups = "loginTrue",description = "测试准备工作,获取HttpClient对象等")
     public void beforeTest() {
         TestConfig.defaultHttpClient = new DefaultHttpClient();
         TestConfig.getUserInfoUrl = ConfigFile.getUrl(InterfaceName.GETUSERINFO);
@@ -32,7 +32,15 @@ public class LoginTest {
 
         @Test(groups = "loginTrue",description = "用户成功登陆接口")
         public void loginTrue() throws IOException {
+            /**
+             * DatabaseUtil文件加载databaseConfig.xml数据库配置文件
+             * databaseConfig.xml加载操作数据库的SQLMapper.xml文件
+             * DatabaseUtil生成SqlSession对象
+             * SqlSession创建代理对象session
+             * session.selectOne选择一个用户进行登录
+             */
             SqlSession session = DatabaseUtil.getSqlSession();
+            //使用前边model中创建好的类接受对应的case数据，读取SQLMapper.xml配置文件中的SQL语句
             LoginCase loginCase = session.selectOne("loginCase",1);
             System.out.println(loginCase.toString());
             System.out.println(TestConfig.loginUrl);
@@ -51,15 +59,11 @@ public class LoginTest {
             System.out.println(loginCase.toString());
             System.out.println(TestConfig.loginUrl);
 
-
-
             //下边的代码为写完接口的测试代码
             String result = getResult(loginCase);
             //处理结果，就是判断返回结果是否符合预期
             Assert.assertEquals(loginCase.getExpected(),result);
-
         }
-
 
         private String getResult(LoginCase loginCase) throws IOException {
             //下边的代码为写完接口的测试代码

@@ -8,14 +8,13 @@ import java.util.ResourceBundle;
 public class ConfigFile {
 
     private static ResourceBundle bundle= ResourceBundle.getBundle("application", Locale.CHINA);;
-
+    //工具类直接用静态方法，下面这个工具类用来实现URL链接的拼接
     public static String getUrl(InterfaceName name){
         String address = bundle.getString("test.url");
-        String uri = "";
-        String testUrl;
+        String uri = "";//这个uri用来判断依次赋值
+        String testUrl;//最终的测试地址
         if(name == InterfaceName.GETUSERLIST){
-            uri = bundle.getString("getUserList.uri");
-
+            uri =bundle.getString("getUserList.uri");
         }
 
         if(name == InterfaceName.LOGIN){

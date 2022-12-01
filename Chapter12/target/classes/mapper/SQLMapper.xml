@@ -6,6 +6,7 @@
 
     <!--获取登陆接口case-->
     <select id="loginCase" parameterType="Integer"  resultType="com.tester.model.LoginCase">
+        <!--resultType="com.tester.model.loginCase" 非常重要，指明select操作得到的记过封装到哪里去-->
         select * from loginCase
         where id = #{id};
     </select>
